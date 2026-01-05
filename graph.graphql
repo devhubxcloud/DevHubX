@@ -1,0 +1,32 @@
+{
+  user(login: "{username}") {
+    name
+    login
+    avatarUrl
+    bio
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+            color
+          }
+        }
+      }
+    }
+    repositoriesContributedTo(first: 10) {
+      totalCount
+      nodes {
+        name
+      }
+    }
+    pullRequests(first: 10) {
+      totalCount
+    }
+    issues(first: 10) {
+      totalCount
+    }
+  }
+}
